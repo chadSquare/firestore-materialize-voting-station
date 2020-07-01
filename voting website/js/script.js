@@ -114,7 +114,7 @@ function addArtists(doc) {
   const option = document.createElement("option");
 
   //set the img and data-id to the corresponding name and id of the firstore document
-  option.setAttribute("data-icon", `../images/${doc.data().name}.jpg`);
+  option.setAttribute("data-icon", `./images/${doc.data().name}.jpg`);
   option.setAttribute("data-id", doc.id);
   option.textContent = doc.data().name;
 
