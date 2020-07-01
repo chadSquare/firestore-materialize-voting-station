@@ -4,5 +4,6 @@ This is a simple website that uses Cloud Firestore, Materialize CSS, and Chart.j
 Case:
 >A platform for users to vote for their favorite music artists and also view where the artists rank.
 >The musician names and the number of votes obtained are stored in a Firestore collection. 
->Users are able to select their favourite musician from the dropdown and then submit their vote. 
+>Users are able to select which genre they want to view.
+>Users can select their favourite musician from the dropdown and then submit their vote. 
 >The votes in the database and the graph on the web page are updated immediately.
