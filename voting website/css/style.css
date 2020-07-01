@@ -1,0 +1,101 @@
+/* START  OF GENERAL STYING */
+
+* {
+  box-sizing: border-box;
+}
+/* change the background colour of the nav and footer */
+nav,
+.page-footer {
+  background-color: #00adb5;
+}
+
+/* start of mobile nav styiling */
+.sidenav li:first-child {
+  background-color: #00adb5;
+  padding: 3em;
+}
+.sidenav li:first-child a {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* add space between the list items */
+.sidenav li:nth-child(3) {
+  padding: 3em;
+}
+/* end of mobile nav styiling */
+
+/* always fill up the full screen */
+.main-content {
+  min-height: calc(100vh - 64px - 81px);
+  /* border: 1px solid; */
+}
+
+/* END OF GENERAL STYING */
+
+/*START OF HOME STYLING */
+
+/* raise the text in the slider */
+.slider h3 {
+  margin: -2em;
+  padding: 1em;
+}
+
+/* lower the button in the slider */
+.slider a {
+  margin-bottom: -40em;
+}
+
+/* move the button closer to the edge */
+.slide-btn {
+  margin: -3em;
+}
+
+/* remove the padding so that the cards are not pushed in (make cards line up with slider) */
+.info .col {
+  padding: 0;
+}
+
+/*END OF HOME STYLING */
+
+/*  START OF CATEGORY PAGE STYLING*/
+/* add spacing between the boxes */
+.category-boxes {
+  margin: 1em;
+  height: 10em;
+}
+
+/* lower the text to the center */
+.category-boxes h4 {
+  margin-top: 1.5em;
+}
+
+/* raise the last boxes text for mobile view */
+@media (max-width: 996px) {
+  .category-boxes:nth-child(5) h4 {
+    margin-top: 0.5em;
+  }
+}
+
+@media (min-width: 600px) {
+  /* add a space separating the cards vertically */
+  .info .col:nth-child(even) {
+    padding-left: 0.5em;
+  }
+}
+/*  END OF CATEGORY PAGE STYLING*/
+
+/* START OF THE VOTING PAGE STYLING */
+/* increase the padding of the list items */
+.dropdown-content li > a,
+.dropdown-content li > span {
+  padding: 33px 16px;
+}
+
+/* increase the height of the imgs in the list */
+.select-dropdown li img {
+  height: 5.2em;
+  width: 10em;
+  margin-top: 0.5rem;
+}
+/* END OF THE VOTING PAGE STYLING */

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>LiveRanks - Voting</title>
+  </head>
+  <body>
+    <!-- start of main navigation -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container">
+          <a
+            href="#"
+            data-target="slide-out"
+            class="sidenav-trigger hide-on-large"
+            ><i class="material-icons">menu</i></a
+          >
+          <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">LiveRanks</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#">About us</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- end of main navigation -->
+
+    <!-- mobile navigation -->
+    <ul id="slide-out" class="sidenav center">
+      <li><a href="index.html">LiveRanks</a></li>
+      <li><a class="waves-effect" href="#">About Us</a></li>
+      <li><a class="waves-effect" href="categories.html">Categories</a></li>
+      <li><a class="waves-effect" href="#">Contact Us</a></li>
+    </ul>
+    <!-- end of mobile navigation -->
+    <div class="main-content">
+      <!-- start of voting area -->
+      <div class="container">
+        <h3 class="center">Vote For Your Favorite Musician</h3>
+        <div class="section">
+          <div class="input-field col s12 m6">
+            <select id="list" class="icons">
+              <option value="" disabled selected
+                >Choose your favorite musician</option
+              >
+              <!-- options are created dynamically with JS -->
+            </select>
+
+            <button
+              href="#modal"
+              id="vote-btn"
+              class="btn cyan darken-1 waves-effect waves-purple waves-light modal-trigger"
+            >
+              Submit my vote
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end of voting area -->
+      <h4 id="graph-name" class="center">Live Musician Rankings</h4>
+
+      <div class="container section">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <!-- start of the alert  modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h4 id="modal-text">some shit</h4>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="btn-small modal-close waves-effect btn-flat"
+            >OK</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- start of the alert  modal -->
+
+    <!-- start of footer -->
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          <p class="center">Created By Chad Square &copy; 2020</p>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- chartjs script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDVHT_6BN4l3i94rL3G5e1XngZRQF_6miM",
+        authDomain: "music-voting-df12b.firebaseapp.com",
+        databaseURL: "https://music-voting-df12b.firebaseio.com",
+        projectId: "music-voting-df12b",
+        storageBucket: "music-voting-df12b.appspot.com",
+        messagingSenderId: "323734660457",
+        appId: "1:323734660457:web:3d5d02475ea681e57109f8",
+        measurementId: "G-VJQFNJ693N",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const database = firebase.firestore();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
