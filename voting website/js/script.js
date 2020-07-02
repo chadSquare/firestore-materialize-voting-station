@@ -124,6 +124,12 @@ function addArtists(doc) {
   //initialize materialize form
   const formElems = document.querySelectorAll("select");
   const formInstances = M.FormSelect.init(formElems);
+  
+  //remove the loading animation
+  const progressBar = document.querySelector(".progress");
+  if (progressBar) {
+    progressBar.remove();
+  }
 }
 
 const btn = document.querySelector("#vote-btn");
