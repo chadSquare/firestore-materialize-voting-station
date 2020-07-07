@@ -25,8 +25,10 @@ categoryBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     /*when the users chooses a category, save the data-target in the local storage,
       this is used to determine which firestore collection to use*/
-    localStorage.setItem("category", btn.dataset.target);
-    btn.href = "voting.html";
+      if (btn.dataset.target != "null") {
+      localStorage.setItem("category", btn.dataset.target);
+      btn.href = "voting.html";
+    }
   });
 });
 //var that checks if option elements were created
